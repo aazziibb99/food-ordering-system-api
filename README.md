@@ -46,6 +46,9 @@ php artisan db:seed
 # run server
 php artisan serve
 
+# add token to ngrok
+ngrok config add-authtoken 2kEJE9rdkckGtwFdcNl4FL9ZVVC_AB1j4YhcHWHWSpZNa6fj
+
 # run tunnel to public internet (for HitPay webhook)
 ngrok http 8000
 ```
