@@ -1782,7 +1782,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Edit\",\r\n    \"category\": \"Edit\",\r\n    \"address\": \"Edit\",\r\n    \"phone_number\": \"Edit\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Edit\",\r\n    \"category\": \"Edit\",\r\n    \"address\": \"Edit\",\r\n    \"phone_number\": \"Edit\",\r\n    \"status\": \"Approved\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

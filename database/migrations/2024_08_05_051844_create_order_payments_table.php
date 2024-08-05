@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('payment_request_id');
             $table->decimal('amount', 8, 2);
             $table->string('status');
+            $table->string('payment_request_url');
             $table->timestamps();
         });
     }

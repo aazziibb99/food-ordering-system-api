@@ -51,7 +51,7 @@ class OrderPaymentController extends Controller
                         "state" => "TestState",
                         "postal_code" => "TestPostalCode",
                     ],
-                    "webhook" => "https://b098-115-135-28-60.ngrok-free.app/api/orders/".$order->id."/payments",
+                    "webhook" => "https://5d94-2001-d08-d5-d722-5913-dc21-df5e-fea6.ngrok-free.app/api/orders/".$order->id."/payments",
                 ],
             ]);
 
@@ -59,8 +59,11 @@ class OrderPaymentController extends Controller
             $payment->payment_request_id = $payment_request->id;
             $payment->amount = $payment_request->amount;
             $payment->status = $payment_request->status;
+            $payment->payment_request_url = $payment_request->url;
         } else {
-            $payment->status = $request->status ?? $payment->status;
+            $response = $this->client->get($payment->payment_request_id);
+            $payment_request = json_decode($response->getBody()->getContents());
+            $payment->status = $request->status ?? $payment_request->status;
         }
 
         $payment->save();
@@ -73,9 +76,9 @@ class OrderPaymentController extends Controller
      */
     public function show(Order $order, OrderPayment $payment)
     {
-        $response = $this->client->get($payment->payment_request_id);
-        $payment_request = json_decode($response->getBody()->getContents());
-        return $payment_request;
+        // $response = $this->client->get($payment->payment_request_id);
+        // $payment_request = json_decode($response->getBody()->getContents());
+        return $payment;
     }
 
     /**
