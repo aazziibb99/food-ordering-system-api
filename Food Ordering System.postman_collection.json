@@ -128,7 +128,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"user\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -394,7 +394,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"user\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -1198,7 +1198,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"restaurant\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -1464,7 +1464,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"restaurant\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -2273,7 +2273,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"menu\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -2541,7 +2541,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"menu\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -3365,7 +3365,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"order\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -3631,7 +3631,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"order\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -4435,7 +4435,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"item\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -4703,7 +4703,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"item\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -5515,7 +5515,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"payment\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -5783,7 +5783,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									""
+									"pm.collectionVariables.set(\"payment\", JSON.parse(responseBody).id);"
 								],
 								"type": "text/javascript",
 								"packages": {}
