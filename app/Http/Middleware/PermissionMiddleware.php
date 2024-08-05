@@ -15,6 +15,7 @@ class PermissionMiddleware
      */
     public function handle(Request $request, Closure $next, $model): Response
     {
+        $checkFor = $model;
         $user = request()->attributes->get("user");
         $model = request()->route()->parameter($model);
 
@@ -28,11 +29,11 @@ class PermissionMiddleware
             }
         }
 
-        if($model->restaurant_id && request()->route()->parameter("restaurant") && $model->restaurant_id != request()->route()->parameter("restaurant")->id) {
+        if($model && $model->restaurant_id && request()->route()->parameter("restaurant") && $model->restaurant_id != request()->route()->parameter("restaurant")->id) {
             return response(["message" => "menu does not exist in this restaurant"], 404);
         }
 
-        if($model->order_id && request()->route()->parameter("order") && $model->order_id != request()->route()->parameter("order")->id) {
+        if($model && $model->order_id && request()->route()->parameter("order") && $model->order_id != request()->route()->parameter("order")->id) {
             return response(["message" => "item does not exist in this order"], 404);
         }
 
