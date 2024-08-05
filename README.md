@@ -54,7 +54,7 @@ ngrok http 8000
 
 - Download and Install Postman client
 - Import Food Ordering System.postman_collection.json
-- Login Details:
+- Login Details (refer to seeder if error):
   + (Admin) email: "admin@example.com", password: "adminpassword"
   + (Manager) email: "siti.aishah@example.com", password: "password123"
   + (Customer) email: "ahmad.ali@example.com", password: "password123"
